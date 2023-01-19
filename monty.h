@@ -47,7 +47,6 @@ int empty_line(char *line, char *delims);
 
 int execute(char **token, stack_t **stack, unsigned int line_num);
 int monty_push(stack_t **stack, char **token, unsigned int line_num);
-int monty_pushq(&stack, token, line_num);
 int monty_pushq(stack_t **stack, char **token, unsigned int line_num);
 void monty_pall(stack_t **stack, unsigned int line_num);
 
