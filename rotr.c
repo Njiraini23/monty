@@ -1,13 +1,13 @@
 #include "monty.h"
 
 /**
- * monty_rotl - A function that rotates the stack to the top.
+ * monty_rotr - A function that rotates the stack to the bottom.
  * @stack: The pointer to the stack list.
  * @line_number: The line number of a Monty bytecodes file.
- * Description: The top element of the stack becomes the last one,
- * and the second top element of the stack becomes the first one.
+ * Description: The last element of stack becomes top one,
+ * of the stack
  */
-void monty_rotl(stack_t **stack, unsigned int line_number)
+void monty_rotr(stack_t **stack, unsigned int line_number)
 {
 	int temp;
 	stack_t *cursor = *stack;
@@ -15,11 +15,15 @@ void monty_rotl(stack_t **stack, unsigned int line_number)
 
 	if (*stack)
 	{
-		temp = cursor->n;
 		while (cursor->next != NULL)
 		{
-			cursor->n = cursor->next->n;
 			cursor = cursor->next;
+		}
+		temp = cursor->n;
+		while (cursor->prev != NULL)
+		{
+			cursor->n = cursor->prev->n;
+			cursor = cursor->prev;
 		}
 		cursor->n = temp;
 	}
