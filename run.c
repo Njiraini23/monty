@@ -7,7 +7,7 @@
  */
 int monty_run(FILE *fd)
 {
-	tack_t *stack = NULL;
+	stack_t *stack = NULL;
 	char *line = NULL, **token = NULL, delim[] = " \n\t\a\b";
 	size_t len = 0, mode = 1;
 	unsigned int line_num = 0, exit_status = EXIT_SUCCESS;
