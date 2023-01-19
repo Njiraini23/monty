@@ -42,6 +42,7 @@ int main(int ac, char **av);
 void free_stack(stack_t **stack);
 
 int monty_run(FILE *fd);
+ssize_t getline(char **, size_t *n, FILE *fd);
 char **tokening(char *line, char *delim);
 int empty_line(char *line, char *delims);
 
