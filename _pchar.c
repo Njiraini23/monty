@@ -1,3 +1,4 @@
+#include"main.h"
 /**
  * monty_pchar - A function that prints char at top value of the stack.
  * @stack: The pointer to the stack list.
